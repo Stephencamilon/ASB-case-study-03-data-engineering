@@ -1,4 +1,4 @@
-# WWI Sales Case Study
+# Case Study 03 Data Engineering
 
 A small DuckDB pipeline that loads the WWI sales CSVs, builds a simple reporting
 model, and saves answers to the ten business questions. The model intentionally
