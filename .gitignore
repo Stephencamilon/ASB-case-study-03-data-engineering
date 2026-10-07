@@ -1,0 +1,9 @@
+ASB/
+archive/
+data/*.duckdb
+.vscode/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env

@@ -1,0 +1,46 @@
+1/5 Loading source CSVs
+CSV-to-OLTP load completed.
+OLTP source row counts:
+  oltp.countries: 190
+  oltp.state_provinces: 53
+  oltp.cities: 37,940
+  oltp.people: 1,111
+  oltp.customer_categories: 8
+  oltp.buying_groups: 2
+  oltp.colors: 36
+  oltp.stock_groups: 10
+  oltp.stock_items: 227
+  oltp.stock_item_stock_groups: 442
+  oltp.customers: 663
+  oltp.orders: 73,595
+  oltp.order_backorders: 7,538
+  oltp.order_lines: 231,412
+  oltp.invoices: 70,510
+  oltp.invoice_lines: 228,265
+2/5 Creating warehouse tables
+Completed 02_olap_schema.sql
+Completed 03_load_dimensions.sql
+3/5 Demonstrating customer history
+Completed 05_demo_customer_scd.sql
+4/5 Loading order and invoice facts
+Completed 04_load_facts.sql
+5/5 Saving business-question results
+Warehouse row counts:
+  dim_date: 1,247
+  dim_customer: 664
+  dim_employee: 10
+  dim_product: 227
+  fact_order: 231,412
+  fact_sale: 228,265
+PASS: Order fact row count matches source lines
+PASS: Sale fact row count matches source lines
+PASS: Fact line identifiers are unique
+PASS: Fact dimension keys resolve
+PASS: Source quantities and amounts are valid
+PASS: Invoice dates do not precede order dates
+PASS: Each customer has one current dimension version
+PASS: Customer SCD date ranges are valid
+PASS: Customer SCD date ranges do not overlap
+PASS: Customer SCD example has two versions
+PASS: Sales use both customer versions
+Pipeline completed: C:\Users\Stephen\Documents\Work Related\Analytics Solutions Bootcamp\03_case_study\Case Studies Assignments\03 Data Engineering Case Study\data\wwi_case_study.duckdb
